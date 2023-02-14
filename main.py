@@ -34,7 +34,7 @@ while True:
     eth_diff = eth_price - btc_price
 
     try:
-        eth_change = abs(eth_diff - eth_diff) / eth_diff
+        eth_change = (eth_diff - eth_diff) / eth_diff
         if eth_change > 0.01:
             print('The price of ETHUSDT has changed by more than 1% over the last 60 minutes.')
     except ZeroDivisionError as e:
